@@ -39,10 +39,10 @@
         </div>
         <nav class="navbar">
           <ul class="nav-list">
-            <li class="nav-item"><a href="#FIXME" class="nav-link" title="Home">Home</a></li>
+            <li class="nav-item"><a href="Home.html" class="nav-link" title="Home">Home</a></li>
             <li class="nav-item"><a href="About.html" class="nav-link" title="About">About</a></li>
             <li class="nav-item"><a href="#FIXME" class="nav-link" title="Deals">Deals</a></li>
-            <li class="nav-item"><a href="Reservation.html" class="nav-link" title="Reservation">Reservation</a></li>
+            <li class="nav-item"><a href="#FIXME" class="nav-link" title="Reservation">Reservation</a></li>
             <li class="nav-item"><a href="#FIXME" class="nav-link" title="Book Yours">Book Yours</a></li>
           </ul>
         </nav>
@@ -84,12 +84,75 @@
         </div>
       </section>
       <!-- contact section end hare -->
+      <!-- contact form section start here -->
+      <section class="contact-form">
+        <div class="wrapper">
+          <div class="mapouter">
+            <div class="gmap_canvas">
+              <iframe class="gmap_iframe"
+                src="https://maps.google.com/maps?width=1138&amp;height=395&amp;hl=en&amp;q=sunnyislessbeach&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            </div>
+          </div>
+          <form action="#FIXME" method="post" class="my-form" name="form">
+            <h3 class="form-heading">Make Your <span class="form-span">Reservation</span> Through This <span
+                class="form-span">Form</span></h3>
+            <div class="input-group">
+              <div class="input-content">
+                <label for="Name">Your Name</label>
+                <div class="input-text">
+                  <input type="text" name="Name" id="Name" class="input name" placeholder="Ex. John Smithee">
+                </div>
+              </div>
+              <div class="input-content">
+                <label for="Email">Your Phone Number</label>
+                <div class="input-text">
+                  <input type="text" name="Email" id="Email" class="input Email" placeholder="Ex. +XXX XXX XXX">
+                </div>
+              </div>
+            </div>
+            <div class="input-group">
+              <div class="input-content">
+                <label for="guest">Number Of Guests</label>
+                <div class="input-text">
+                  <select name="Guest" id="guest" class="guest">
+                    <option value="select">ex. 3 or 4 or 5</option>
+                    <option value="select">ex. 4 or 5 or 6</option>
+                    <option value="select">ex. 7 or 8 or 9</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-content">
+                <label for="date">Check In Date</label>
+                <div class="input-text">
+                  <input type="date" name="Email" id="Email" class="input Email" placeholder="mm/dd/yyyy">
+                </div>
+              </div>
+            </div>
+            <div class="input-destination">
+              <div class="input-content">
+                <label for="destination">Choose Your Destination</label>
+                <div class="input-text">
+                  <select name="Destination" id="Destination" class="Destination">
+                    <option value="select">ex. Switzerland,Lausanne</option>
+                    <option value="select">ex. Europe , Lausanne</option>
+                    <option value="select">ex. Havana , Kingston</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="input-control">
+              <input type="submit" name="sub-btn" class="sub-btn" value="Make Your Reservation Now">
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
     <!--main section end-->
 
     <!--footer section start-->
     <footer>
-
+      <p class="copy">Copyright &#169; WoOx Travel company. All rights reserved. Design <a href="#FIXME"
+        title="TemplateMo" class="copy-link">TemplateMo</a></p>
     </footer>
     <!--footer section end-->
 
