@@ -880,7 +880,7 @@ select {
   transition: all .3s ease-in-out;
 }
 
-.sub-btn:hover{
+.sub-btn:hover, .deal-link:hover{
   color: var(--primary-color);
   background-color:var(--white);
   border-color: var(--primary-color);
@@ -890,20 +890,20 @@ select {
 
 /* about page start here */
 /* banner start here */
-.banner{
+.about-banner{
   padding: 112px 0 176px 0;
   background: url(../images/about-content-bg.jpg) no-repeat center;
   background-position:center;
   background-size: cover;
 }
 /* setting wrapper for about page as per template */
-.banner .wrapper ,.cities .wrapper , .offer .wrapper , .discover .wrapper ,
+.about-banner .wrapper ,.cities .wrapper , .offer .wrapper , .discover .wrapper ,
 .location .wrapper, .about-wrap .wrapper {
-  width: 84.3%;
+  width: 84.5%;
   padding: 100px 0 106px 0;
 }
 
-.banner .wrapper {
+.about-banner .wrapper {
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -911,23 +911,320 @@ select {
   backdrop-filter: blur(10px);
 }
 
-.banner .heading {
+.about-banner .heading {
   padding-bottom: 18px;
 }
 
-.banner .para {
+.about-banner .para {
   width: 62%;
   text-align: center;
 }
 
-.banner .prefered {
+.about-banner .prefered {
   font-weight: 600;
   text-transform: uppercase;
 }
 
-.banner .prefered::after {
+.about-banner .prefered::after {
   background-color: #919AA9;
 }
+/* banner end here */
+/* cities section start here */
+.cities {
+  padding-bottom: 140px;
+  position: relative;
+  background-color: #232223;
+}
+
+.city-content {
+  width: 84.5%;
+  padding: 48px 3.6% 45px 3.6%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: -60px;
+  background-color: var(--white);
+}
+
+.city-item {
+  display: none;
+}
+
+.city-list , .control-wrap , .city-slide , .city-name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.country-list { width: 100%; }
+
+.city-item:nth-child(1),
+.city-item:nth-child(2),
+.city-item:nth-child(3),
+.city-item:nth-child(4){ display: block; }
+
+.city-fig img {
+  border-radius: 8px;
+}
+ 
+.city-heading {
+  padding-bottom: 22px;
+  color: #282828;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.city-heading span {
+  color: var(--primary-color);
+}
+
+.city-item {
+  flex-basis: 23%;
+}
+
+.city-fig {
+  max-width: 240px;
+  position: relative;
+}
+
+figcaption {
+  position: inherit;
+  bottom: 50px;
+  left: 19px;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.left ,.right {
+  display: block;
+  text-indent: -9999px;
+}
+
+.font-icon::before{
+  color: #C1C1C2;
+  cursor: pointer;
+  font-family: "FontAwesome";
+  float: left;
+  text-indent: 0;
+  transition: all .3s ease-in-out;
+}
+
+.left::before,
+.left-btn::before {
+  content: "\f060";
+}
+
+.right::before ,
+.right-btn::before{
+  content: "\f061";
+}
+
+.left:hover::before , .right:hover::before {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+  
+.arrow {
+  position: absolute;
+  top: 64px;
+  right: 49px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 4%;
+}
+/* cities section end here */
+/* offer section start here */
+.offer{
+  padding-bottom: 60px;
+  position: relative;
+  background-color: #232223;
+}
+
+.offer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.offer-heading {
+  padding-bottom: 14px;
+  color: #424242;
+  font-size: 28px;
+  font-weight: 600;
+  opacity: 0.6;
+}
+
+.city-slide {
+  padding: 75px 0 51px 0;
+}
+
+.offer-description {
+  font-size: 13px;
+  color: #b9b1b1;
+  width: 47%;
+  text-align: center;
+}
+
+.city-slide-item {
+  display: none;
+  position: relative;
+}
+
+.city-slide-item:nth-child(1),
+.city-slide-item:nth-child(2),
+.city-slide-item:nth-child(3){ display: block;}
+
+.city-slide-item {
+  flex:0 0 33%;
+}
+.city-slide-item figure {
+  max-height: 312px;
+  height: 100%;
+  max-width: 225px;
+}
+
+.city-slide-item figure img {
+  border-radius: 20px 0 0 20px;
+}
+
+.city-name {
+  padding-bottom: 14px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.slide-content {
+  padding:  25px 7.5% 33px 7.5%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position:absolute;
+  top: 27px;
+  left: 32%;
+  background: var(--white);
+}
+
+.sub-heading {
+  color: #282828;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.cost span {
+  display: block;
+}
+
+.cost {
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.person-icon , .cost span {
+  font-size: 13px;
+  color: #b0b0b0;
+}
+
+.person-icon {
+  padding-left: 22px;
+  position: relative;
+}
+
+.deal-list {
+  padding: 17px 0 18px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.deal-sub-heading h6{
+  padding-bottom: 10px;
+  color: var(--black);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.deal-item {
+  padding: 0 0 10px 17px;
+  position: relative;
+  font-size: 12px;
+  color: #b4b4b4;
+}
+
+.deal-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.deal-link {
+  font-size: 12px;
+  color: var(--white);
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 30px;
+  padding: 10px 32px;
+  transition: all .3s ease-in-out;
+}
+
+.font_icon::before {
+  font-family: "FontAwesome";
+  float: left;
+  color: #AFAFAF;
+  position: absolute;
+  top: 2px;
+  left: 1px;
+}
+
+.person-icon::before{
+  content: "\f0c0";
+  position: absolute;
+  top: 2px;
+  left: 1px;
+}
+
+.car::before{
+  content:"\f1b9";
+}
+
+.plane::before {
+  content: "\f072";
+}
+
+.calender::before{
+  content: "\f073";
+}
+
+.deal-control {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 13%;
+  left: 46%;
+}
+
+.left-btn , .right-btn{ text-indent: -9999px;}
+
+.btn-arrow::before {
+  font-family: "FontAwesome";
+  color: var(--primary-color);
+  float: left;
+  text-indent: 0;
+  margin-left: 9px;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* offer section end here */
 /*=================================
   main styling ends here
 =================================*/
@@ -955,6 +1252,7 @@ footer{
  .copy-link:hover {
   color: var(--black);
  }
+
  /*=================================
   footer styling ends here
 =================================*/ 
