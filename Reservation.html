@@ -57,7 +57,7 @@
           <span class="prefered">Book Prefered Deal Here</span>
           <h2 class="heading">Make Your Reservation</h2>
           <p class="para">Lorem ipsum dolor sit amet, consecteture adipiscing elit, sed do eiusmad tempor incididunt
-            uttersi labore et dolore magna aliqua is ispum suspendisse ultrices gravida</p>
+            uttersi labore et dolore <span>magna aliqua is ispum suspendisse ultrices gravida</span></p>
           <div class="discover-ctrl">
             <a href="#FIXME" class="discover-btn">Discover More</a>
           </div>
@@ -68,15 +68,15 @@
       <section class="connect">
         <div class="wrapper">
           <ul class="connect-list">
-            <li class="connect-item">
+            <li class="connect-item call">
               <span class="connect-span">Make a Phone Call</span>
               <a href="tel:+1234567890" title="Call Us">+123 456 789 (0)</a>
             </li>
-            <li class="connect-item">
+            <li class="connect-item email">
               <span class="connect-span">Contact Us Via Email</span>
               <a href="mailto:company@email.com" title="Email Us">comapny@email.com</a>
             </li>
-            <li class="connect-item">
+            <li class="connect-item address">
               <span class="connect-span">Visit Our Offices</span>
               <address>24th Street North Avenue London, UK</address>
             </li>
@@ -87,6 +87,7 @@
       <!-- contact form section start here -->
       <section class="contact-form">
         <div class="wrapper">
+          <div class="form-container">
           <div class="mapouter">
             <div class="gmap_canvas">
               <iframe class="gmap_iframe"
@@ -104,14 +105,14 @@
                 </div>
               </div>
               <div class="input-content">
-                <label for="Email">Your Phone Number</label>
+                <label for="Number">Your Phone Number</label>
                 <div class="input-text">
-                  <input type="text" name="Email" id="Email" class="input Email" placeholder="Ex. +XXX XXX XXX">
+                  <input type="text" name="Number" id="Number" class="input Number" placeholder="Ex. +XXX XXX XXX">
                 </div>
               </div>
             </div>
             <div class="input-group">
-              <div class="input-content">
+              <div class="input-content creat-down">
                 <label for="guest">Number Of Guests</label>
                 <div class="input-text">
                   <select name="Guest" id="guest" class="guest">
@@ -124,7 +125,7 @@
               <div class="input-content">
                 <label for="date">Check In Date</label>
                 <div class="input-text">
-                  <input type="date" name="Date" id="date" class="input Email">
+                  <input type="date" name="Date" id="date" class="input date">
                 </div>
               </div>
             </div>
@@ -132,7 +133,7 @@
               <div class="input-content">
                 <label for="destination">Choose Your Destination</label>
                 <div class="input-text">
-                  <select name="Destination" id="destination" class="Destination">
+                  <select name="Destination" id="destination" class="destination">
                     <option value="select">ex. Switzerland,Lausanne</option>
                     <option value="select">ex. Europe , Lausanne</option>
                     <option value="select">ex. Havana , Kingston</option>
@@ -141,9 +142,12 @@
               </div>
             </div>
             <div class="input-control">
+              <div class="btn-wrap">
               <input type="submit" name="sub-btn" class="sub-btn" value="Make Your Reservation Now">
             </div>
+          </div>
           </form>
+          </div>
         </div>
       </section>
       <!-- contact form section end here -->
@@ -152,8 +156,8 @@
 
     <!--footer section start-->
     <footer>
-      <p class="copy">Copyright &#169; WoOx Travel company. All rights reserved. Design <a href="#FIXME"
-        title="TemplateMo" class="copy-link">TemplateMo</a></p>
+      <p class="copy">Copyright &#169; WoOx Travel company. All rights reserved.<a href="#FIXME"
+        title="TemplateMo" class="copy-link">Design: TemplateMo</a></p>
     </footer>
     <!--footer section end-->
 
