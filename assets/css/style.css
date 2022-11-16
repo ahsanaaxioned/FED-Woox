@@ -178,18 +178,19 @@ nav.navbar {
 /*=================================
   main styling starts here
 =================================*/
+/* home page banner start here */
 .banner-slide { position: relative;}
 .banner-item {
   position: relative;
 }
 
 .banner-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   position: absolute;
   top: 19.4%;
   left: 34.4%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .banner-span {
@@ -200,9 +201,9 @@ nav.navbar {
 
 .banner-heading {
   margin-top: 11px;
+  color: var(--white);
   font-size: 46px;
   font-weight: 700;
-  color: var(--white);
 }
 
 .banner-btn {
@@ -213,16 +214,16 @@ nav.navbar {
   padding: 11px 28px;
   border-radius: 30px;
   border: 1px solid var(--primary-color);
-  font-size: 12px;
   color: var(--primary-color);
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 1px;
   transition: all .3s ease-in-out;
 }
 
 .go-btn:hover {
-  color: var(--white);
   border-color: var(--white);
+  color: var(--white);
 }
 
 .banner-item {
@@ -234,18 +235,17 @@ nav.navbar {
 }
 
 .counter-part {
+  width: 88.8%;
+  padding: 31px 0;
+  border-radius: 60px;
+  margin: 32px 0 0 5.5%;
   display: flex;
+  align-items: center;
   justify-content: center;
   position: absolute;
   top: 60%;
   left: 0;
-  margin-top: 32px;
   background: var(--white);
-  width: 88.8%;
-  margin-left: 5.5%;
-  border-radius: 60px;
-  align-items: center;
-  padding: 31px 0;
 }
 
 .counter-list {
@@ -254,41 +254,54 @@ nav.navbar {
 }
 
 .counter-item { 
-  position: relative;
   padding: 0 7.8%;
+  position: relative;
  }
+
+ .counter-item:nth-child(1) {
+  padding: 0 12.8%;
+}
+
+.counter-item:nth-child(2){
+  padding:  0 7.5%;
+}
+
+.counter-item:nth-child(3){
+  padding:  0 9.7%;
+}
 
 .counter-heading {
   color: #ACB3B6;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
 }
 
 .counter-Num{
+  color: var(--primary-color);
   font-size: 19px;
   font-weight: 700;
-  color: var(--primary-color);
 }
 
 .counter-item::before {
-  font-family: "FontAwesome";
-  float: left;
-  color: var(--primary-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: -1px;
-  left: 8%;
   width: 52px;
   height: 52px;
   border: 1px solid var(--primary-color);
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  position: absolute;
+  top: -1px;
+  left: 0%;
+  color: var(--primary-color);
+  font-family: "FontAwesome";
   font-size: 23px;
 }
 
 .user::before {
   content: "\f007";
+  left: 16%;
 }
 
 .world::before{
@@ -297,16 +310,24 @@ nav.navbar {
 
 .home::before{
   content: "\f015";
+  left: 8%;
 }
 
 .explore {
-  font-size: 14px;
-  color: var(--white);
-  border: 1px solid var(--primaty-color);
-  background: var(--primary-color);
   padding: 12px 26px;
+  border: 1px solid var(--primary-color);
   border-radius: 30px;
+  background: var(--primary-color);
+  color: var(--white);
+  font-size: 14px;
   font-weight: 600;
+  transition: all .3s ease-in-out;
+}
+
+.explore:hover, .data-link:hover{
+  border: 1px solid var(--primary-color);
+  background-color: var(--white);
+  color: var(--primary-color);
 }
 
 .banner-control {
@@ -315,53 +336,40 @@ nav.navbar {
   left: 50%;
 }
 
-/* .control-item {
-  color: var(--white);
-  font-size: 18px;
-}
-
-.control-item::before {
-  content: "";
-  width: 205px;
-  height: 2px;
-  background-color: var(--white);
-  color: var(--white);
-} */
-
 .counter.control {
   flex-basis: 16.7%;
 }
-
-
-
+/* home page banner start here */
+/* home page visit country section start here */
 .visit-Country .wrapper {
-  padding: 30px 0;
+  padding: 64px 0 100px 0;
   position: relative;
 }
 
 .visit-heading {
   padding-bottom: 14px;
-  font-size: 24px color;
-  font-size: 26px;
   color: #28282A;
-  font-weight: 600;
+  font-size: 27px;
+  font-weight: 800;
 }
 
 .visit-description {
-  font-size: 13px;
-  color: var(--para-color);
   width: 36.6%;
+  color: var(--para-color);
+  font-size: 13px;
   line-height: 25px;
 }
 
 .visit-wrap {
+  padding: 63px 0;
   display: flex;
   justify-content: space-between;
 }
 
 .country-list {
-  flex-basis: 66.7%;
+  margin-bottom: 31px;
   display: flex;
+  flex-basis: 66.7%;
   flex-direction: column;
 }
 
@@ -370,17 +378,22 @@ nav.navbar {
 }
 
 iframe.gmap-iframe {
-  height: 505px;
   width: 353px;
+  height: 505px;
   border-radius: 25px;
 }
 
 .country-item {
+  padding-bottom: 26px;
+  border-bottom: 1px solid #f7f7f7;
+  margin: 15px 0;
   display: flex;
   justify-content: space-between;
-  margin: 15px 0;
 }
 
+.country-item:nth-child(3){
+  border: none;
+}
 .country-fig {
   max-width: 246px;
   flex: 0 0 31%;
@@ -404,8 +417,8 @@ iframe.gmap-iframe {
 
 .data-heading {
   padding-bottom: 4px;
-  font-size: 18px;
   color: #111212;
+  font-size: 18px;
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -416,35 +429,52 @@ iframe.gmap-iframe {
 }
 
 .data-link {
-  color: var(--white);
-  background: var(--primary-color);
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  font-weight: 600;
   padding: 10px 5.9%;
   border: 1px solid var(--primary-color);
   border-radius: 45px;
+  display: flex;
+  align-items: center;
+  background: var(--primary-color);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  transition: all .3s ease-in-out;
 }
 
 .people-data {
+  padding: 15px 0;
+  border-top: 1px solid #f7f7f7;
+  border-bottom: 1px solid #f7f7f7;
+  margin: 22px 0 17px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid #f0f0f0;
-  border-bottom: 1px solid #f0f0f0;
-  padding: 16px 0;
 }
 
 .people-list {
-  font-size: 13px;
+  position: relative;
   color: var(--para-color);
+  font-size: 13px;
 } 
 
+.people-list:nth-child(1){
+  margin: 0 3.5%;
+}
+
+.people-list:nth-child(2){
+  margin-right: 9.4%;
+ }
+
+.people-list:nth-child(3){
+ margin-right: 4.5%;
+}
+
 .people-list::before {
-  font-family: "fontAwesome";
-  float: left;
+  position: absolute;
+  top: 3px;
+  left: -19px;
   color: var(--para-color);
+  font-family: "fontAwesome";
 }
 
 .data-description a {
@@ -457,9 +487,9 @@ iframe.gmap-iframe {
 }
 
 .direction-link {
-  font-size: 13px;
-  color: var(--primary-color);
   position: relative;
+  color: var(--primary-color);
+  font-size: 13px;
   transition: all .3s ease-in-out;
 }
 
@@ -469,28 +499,27 @@ iframe.gmap-iframe {
 
 .direction-link::before {
   content: "\f061";
-  font-family: "FontAwesome";
-  float: right;
   position: absolute;
-  top: 0;
   top: 3px;
   right: -17px;
+  font-family: "FontAwesome";
 }
-
 
 .btn-ctrl {
   position: absolute;
-  bottom: 0;
+  bottom: 110px;
   left: 25.8%;
+  cursor: pointer;
 }
 
 .btn-ctrl::before,.btn-ctrl::after {
   content: "\f061";
   font-family: "FontAwesome";
   float: left;
-  color: var(--primary-color);
   position: inherit;
   top: 13px;
+  color: var(--primary-color);
+  transition: all .3s ease-in-out;
 }
 
 .btn-ctrl::after{
@@ -508,14 +537,19 @@ iframe.gmap-iframe {
   height: 42px;
   border: 1px solid var(--primary-color);
   border-radius: 50%;
+  margin-left: 10px;
   background: var(--white);
   color: var(--primary-color);
   font-size: 18px;
   font-weight: 500;
-  margin-left: 10px;
 }
 
-
+.page-btn.active {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+/* home page visit country section end here */
+/* home page book section start here */
 .book-section {
   padding: 72px 0 62px 0;
   background: url(../images/cta-bg.jpg) no-repeat center;
@@ -533,16 +567,15 @@ iframe.gmap-iframe {
   flex-basis: 48%;
 }
 
-
 .book-btn {
   flex-basis: 14%;
 }
 
 .book-heading {
-  text-transform: uppercase;
-  font-size: 37px;
   color: var(--white);
+  font-size: 37px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .book-reserve {
@@ -552,14 +585,20 @@ iframe.gmap-iframe {
 }
 
 .reserve-btn {
+  padding: 10px 25px;
+  border: 1px solid;
+  border-radius: 45px;
   color: var(--white);
   font-size: 14px;
   font-weight: 600;
-  border: 1px solid;
-  border-radius: 45px;
-  padding: 10px 25px;
+  transition: all .3s ease-in-out;
 }
 
+.reserve-btn:hover {
+  color: var(--black);
+}
+/* home page book section end here */
+/* scroll too up start here */
 .container {
   position: relative;
 }
@@ -584,21 +623,22 @@ iframe.gmap-iframe {
   border: 1px solid transparent;
   border-radius: 50%;
   display: flex;
-  float: left;
   align-items: center;
+  justify-content: center;
+  float: left;
   background: var(--other);
   box-shadow: 1px 1px 8px #6e6868;
   color: var(--black);
   font-size: 20px;
   font-family: "FontAwesome";
-  justify-content: center;
   transform: translate(-50%, -50%);
   text-indent: 0;
   transition: all .5s ease-in-out;
 }
+/* scroll too up end here */
+/* home page end here */
 
-/* reserve page */
-/* reserve banner page start here */
+/* reserve page start here */
 /* reserve banner start here */
 .reserve-banner {
   padding: 163px 0 173px 0;
@@ -615,35 +655,35 @@ iframe.gmap-iframe {
 
 .prefered {
   padding-bottom: 11px;
-  text-align: center;
   position: relative;
   color: var(--white);
   font-size: 18px;
   font-weight: 500;
+  text-align: center;
 }
 
 .prefered::after{
   content: "";
   width: 87px;
   height: 2px;
-  background: #514F50;
   display: block;
   position: absolute;
   top: 44px;
   left: 59px;
+  background: #514F50;
 }
 
 .heading {
   margin-top: 18px;
+  color: var(--white);
   font-size: 44px;
   font-weight: 700;
-  color: var(--white);
 }
 
 .para{
-  font-size: 13px;
-  color: var(--white);
   width: 66%;
+  color: var(--white);
+  font-size: 13px;
   line-height: 25px;
 }
 
@@ -658,28 +698,29 @@ iframe.gmap-iframe {
 }
 
 .discover-btn {
-  font-size: 13px;
-  color: var(--primary-color);
-  background: var(--white);
   padding: 10px 27px;
   border: 1px solid var(--white);
   border-radius: 45px;
+  background: var(--white);
+  color: var(--primary-color);
+  font-size: 13px;
   font-weight: 600;
   transition: all .3s ease-in-out;
 }
 
 .discover-btn:hover {
-  color: var(--white);
-  background-color: var(--primary-color);
   border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--white);
 }
 /* reserve banner end here */
-
+/* setting wrapper with as per template for reserve page */
 .reserve-banner .wrapper , .connect .wrapper , .contact-form .wrapper {
   width: 84.5%;
 }
-
+/* connect section start here */
 .connect {
+  padding-bottom: 197px;
   position: relative;
   background-color: #232223;
 }
@@ -687,48 +728,57 @@ iframe.gmap-iframe {
 .connect-list {
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  top: -84px;
+  width: 85%;
 }
 
 .connect-item {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--white);
-  position: relative;
   padding: 63px 0 28px 0;
-  flex: 0 0 32.2%;
-  align-items: center;
   border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex: 0 0 32.2%;
+  position: relative;
+  background-color: var(--white);
 }
 
 .connect-span {
+  padding: 30px 0 7px 0;
   color: #282828;
   font-size: 18px;
-  font-weight: 600;
-  padding: 30px 0 7px 0;
+  font-weight: 700;
 }
 
 .connect-item a,
 .connect-item address {
-  font-size: 14px;
   color: var(--primary-color);
+  font-size: 14px;
 }
 
+.connect-item a{
+  transition: all .3s ease-in-out;
+}
 
+.connect-item a:hover {
+  color: var(--black);
+}
 .connect-item::before {
-  font-family: "FontAwesome";
-  color: var(--primary-color);
+  width: 50px;
+  height: 50px;
+  border: 1px solid #E2E2E2;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   float: left;
   position: absolute;
   top: 27px;
   left: 43%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
   background: #E2E2E2;
-  border: 1px solid #E2E2E2;
-  border-radius: 50%;
+  color: var(--primary-color);
+  font-family: "FontAwesome";
 }
 
 .call::before {
@@ -742,24 +792,100 @@ iframe.gmap-iframe {
 .address::before {
   content: "\f041";
 }
-
-/*  */
+/* connect section end here */
+/* contact form section star here*/
+.contact-form {
+  padding-bottom: 108px;
+  background-color: #232223;
+}
 iframe.gmap_iframe {
   width: 100%;
   height: 393px;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
 }
 
-.my-form { width: 100%; }
+.form-container {
+  background: #f9f9f9;
+  border-radius: 20px;
+}
+.my-form { 
+  width: 100%;
+  padding:  50px 8.4% 53px 8.4%;
+ }
+
+ .form-heading {
+  margin-bottom: 38px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.form-span {
+  color: var(--primary-color);
+}
 
 .input-group{
+  margin-bottom: 26px;
   display: flex;
   justify-content: space-around;
 }
-.input-content {
-  flex-basis: 49%;
+
+.input-text {
+  margin-bottom: 24px;
 }
-.input { width: 100%;}
+.input-content {
+  flex-basis: 47.8%;
+}
+
+.input , select, .sub-btn { 
+  width: 100%;
+  border: 1px solid #e9e9e9;
+  outline: none;
+  padding: 10px 2.8%;
+  font-size: 16px;
+  border-radius: 30px;
+}
+
+label {
+  font-size: 14px;
+  color: #B9B3B0;
+}
+
+select {
+  position: relative;
+  appearance: none;
+}
+
+.input-destination , .creat-down {
+  position: relative;
+}
+
+
+.input-destination::before,
+.creat-down::before {
+  content: "\f078";
+  position: absolute;
+  z-index: 1;
+  top: 37px;
+  right: 12px;
+  color: var(--black);
+  font-family: "FontAwesome";
+  font-size: 12px;
+}
+
+.sub-btn {
+  background: var(--primary-color);
+  color: var(--white);
+  font-size: 15px;
+  transition: all .3s ease-in-out;
+}
+
+.sub-btn:hover{
+  color: var(--primary-color);
+  background-color:var(--white);
+  border-color: var(--primary-color);
+}
+/* reserve form section end here */
 /* reserve banner page end here */
 /*=================================
   main styling ends here
@@ -774,14 +900,20 @@ footer{
 }
 
 .copy, .copy-link{
-  line-height: 25px;
-  font-size: 15px;
   color: var(--white);
+  font-size: 15px;
+  line-height: 25px;
   text-align: center;
 }
 
-.copy-link{ display: block; }
+.copy-link{ 
+  display: block;
+  transition: all .3s ease-in-out;
+ }
 
+ .copy-link:hover {
+  color: var(--black);
+ }
  /*=================================
   footer styling ends here
 =================================*/ 
