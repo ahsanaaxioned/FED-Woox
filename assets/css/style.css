@@ -887,6 +887,47 @@ select {
 }
 /* reserve form section end here */
 /* reserve banner page end here */
+
+/* about page start here */
+/* banner start here */
+.banner{
+  padding: 112px 0 176px 0;
+  background: url(../images/about-content-bg.jpg) no-repeat center;
+  background-position:center;
+  background-size: cover;
+}
+/* setting wrapper for about page as per template */
+.banner .wrapper ,.cities .wrapper , .offer .wrapper , .discover .wrapper ,
+.location .wrapper, .about-wrap .wrapper {
+  width: 84.3%;
+  padding: 100px 0 106px 0;
+}
+
+.banner .wrapper {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+.banner .heading {
+  padding-bottom: 18px;
+}
+
+.banner .para {
+  width: 62%;
+  text-align: center;
+}
+
+.banner .prefered {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.banner .prefered::after {
+  background-color: #919AA9;
+}
 /*=================================
   main styling ends here
 =================================*/
