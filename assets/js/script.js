@@ -188,6 +188,7 @@ if (form) {
 // form validation end here
 // tab filter start here
 if(tabBtn){
+  fiterItem[0].classList.add("show");
 tabBtn.forEach(function(filterEle,idx){
 filterEle.addEventListener("click",function(){
   btnAttribute = filterEle.getAttribute('data-target');
