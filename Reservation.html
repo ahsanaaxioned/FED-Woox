@@ -4,14 +4,14 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Reservation Page</title>
+  <title>Home Page</title>
   <!-- View-port Basics: http://mzl.la/VYREaP -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
   <link rel="shortcut icon" href="favicon.ico" />
   <!--font-awesome link for icons-->
   <link rel="stylesheet" media="screen" href="assets/vendor/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+  <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
@@ -39,118 +39,261 @@
         </div>
         <nav class="navbar">
           <ul class="nav-list">
-            <li class="nav-item"><a href="Home.html" class="nav-link" title="Home">Home</a></li>
+            <li class="nav-item"><a href="#FIXME" class="nav-link active" title="Home">Home</a></li>
             <li class="nav-item"><a href="About.html" class="nav-link" title="About">About</a></li>
             <li class="nav-item"><a href="#FIXME" class="nav-link" title="Deals">Deals</a></li>
-            <li class="nav-item"><a href="#FIXME" class="nav-link active" title="Reservation">Reservation</a></li>
+            <li class="nav-item"><a href="Reservation.html" class="nav-link" title="Reservation">Reservation</a></li>
             <li class="nav-item"><a href="#FIXME" class="nav-link" title="Book Yours">Book Yours</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <!--header section start-->
+    <!--header section end-->
     <!--main section start-->
     <main>
-      <!-- reserve-banner start here -->
-      <section class="reserve-banner">
-        <div class="wrapper">
-          <span class="prefered">Book Prefered Deal Here</span>
-          <h2 class="heading">Make Your Reservation</h2>
-          <p class="para">Lorem ipsum dolor sit amet, consecteture adipiscing elit, sed do eiusmad tempor incididunt
-            uttersi labore et dolore <span>magna aliqua is ispum suspendisse ultrices gravida</span></p>
-          <div class="discover-ctrl">
-            <a href="#FIXME" class="discover-btn">Discover More</a>
-          </div>
-        </div>
-      </section>
-      <!-- reserve banner end here -->
-      <!-- connect section start hare -->
-      <section class="connect">
-        <div class="wrapper">
-          <ul class="connect-list">
-            <li class="connect-item call">
-              <span class="connect-span">Make a Phone Call</span>
-              <a href="tel:+1234567890" title="Call Us">+123 456 789 (0)</a>
-            </li>
-            <li class="connect-item email">
-              <span class="connect-span">Contact Us Via Email</span>
-              <a href="mailto:company@email.com" title="Email Us">comapny@email.com</a>
-            </li>
-            <li class="connect-item address">
-              <span class="connect-span">Visit Our Offices</span>
-              <address>24th Street North Avenue London, UK</address>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <!-- contact section end hare -->
-      <!-- contact form section start here -->
-      <section class="contact-form">
-        <div class="wrapper">
-          <div class="form-container">
-            <div class="mapouter">
-              <div class="gmap_canvas">
-                <iframe class="gmap_iframe"
-                  src="https://maps.google.com/maps?width=1138&amp;height=395&amp;hl=en&amp;q=sunnyislessbeach&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+      <!-- banner slide start here -->
+      <section class="banner-slide">
+        <ul class="banner">
+          <li class="banner-item">
+            <figure class="banner-fig">
+              <img src="assets/images/banner-01.jpg" alt="Banner Image">
+            </figure>
+            <div class="banner-content">
+              <span class="banner-span">Take a Glimpse Into The Beutiful Country Of:</span>
+              <h2 class="banner-heading">Switzerland</h2>
+              <div class="banner-btn">
+                <a href="#FIXME" class="go-btn" title="Go There">Go There</a>
               </div>
             </div>
-            <form action="#FIXME" method="post" class="my-form" name="form">
-              <h3 class="form-heading">Make Your <span class="form-span">Reservation</span> Through This <span
-                  class="form-span">Form</span></h3>
-              <div class="input-group">
-                <div class="input-content">
-                  <label for="Name">Your Name</label>
-                  <div class="input-text">
-                    <input type="text" name="Name" id="Name" class="input name" placeholder="Ex. John Smithee">
-                  </div>
-                </div>
-                <div class="input-content">
-                  <label for="Number">Your Phone Number</label>
-                  <div class="input-text">
-                    <input type="text" name="Number" id="Number" class="input Number" placeholder="Ex. +XXX XXX XXX">
-                  </div>
-                </div>
+            <div class="counter-part">
+              <ul class="counter-list">
+                <li class="counter-item user">
+                  <h5 class="counter-heading">population:</h5>
+                  <span class="counter-Num" data-target="8.66">0</span>
+                </li>
+                <li class="counter-item world">
+                  <h5 class="counter-heading">Territory:</h5>
+                  <span class="counter-Num" data-target="41.290">0</span>
+                </li>
+                <li class="counter-item home">
+                  <h5 class="counter-heading">AVG Price:</h5>
+                  <span class="counter-Num" data-target="1.100.200">0</span>
+                </li>
+              </ul>
+              <div class="counter control">
+                <a href="#FIXME" class="explore" title="Explore More">Explore More</a>
               </div>
-              <div class="input-group">
-                <div class="input-content creat-down">
-                  <label for="guest">Number Of Guests</label>
-                  <div class="input-text">
-                    <select name="Guest" id="guest" class="guest">
-                      <option value="select">ex. 3 or 4 or 5</option>
-                      <option value="select">ex. 4 or 5 or 6</option>
-                      <option value="select">ex. 7 or 8 or 9</option>
-                    </select>
+            </div>
+          </li>
+          <li class="banner-item">
+            <figure class="banner-fig">
+              <img src="assets/images/banner-01.jpg" alt="Banner Image">
+            </figure>
+            <div class="banner-content">
+              <span class="banner-span">Take a Glimpse Into The Beutiful Country Of:</span>
+              <h2 class="banner-heading">Switzerland</h2>
+              <div class="banner-btn">
+                <a href="#FIXME" class="go-btn" title="Go There">Go There</a>
+              </div>
+            </div>
+            <div class="counter-part">
+              <ul class="counter-list">
+                <li class="counter-item user">
+                  <h5 class="counter-heading">population:</h5>
+                  <span class="counter-Num" data-target="8.66">0</span>
+                </li>
+                <li class="counter-item world">
+                  <h5 class="counter-heading">Territory:</h5>
+                  <span class="counter-Num" data-target="41.290">0</span>
+                </li>
+                <li class="counter-item home">
+                  <h5 class="counter-heading">AVG Price:</h5>
+                  <span class="counter-Num" data-target="1.100.200">0</span>
+                </li>
+              </ul>
+              <div class="counter control">
+                <a href="#FIXME" class="explore" title="Explore More">Explore More</a>
+              </div>
+            </div>
+          </li>
+          <li class="banner-item">
+            <figure class="banner-fig">
+              <img src="assets/images/banner-01.jpg" alt="Banner Image">
+            </figure>
+            <div class="banner-content">
+              <span class="banner-span">Take a Glimpse Into The Beutiful Country Of:</span>
+              <h2 class="banner-heading">Switzerland</h2>
+              <div class="banner-btn">
+                <a href="#FIXME" class="go-btn" title="Go There">Go There</a>
+              </div>
+            </div>
+            <div class="counter-part">
+              <ul class="counter-list">
+                <li class="counter-item user">
+                  <h5 class="counter-heading">population:</h5>
+                  <span class="counter-Num" data-target="8.66">0</span>
+                </li>
+                <li class="counter-item world">
+                  <h5 class="counter-heading">Territory:</h5>
+                  <span class="counter-Num" data-target="41.290">0</span>
+                </li>
+                <li class="counter-item home">
+                  <h5 class="counter-heading">AVG Price:</h5>
+                  <span class="counter-Num" data-target="1.100.200">0</span>
+                </li>
+              </ul>
+              <div class="counter control">
+                <a href="#FIXME" class="explore" title="Explore More">Explore More</a>
+              </div>
+            </div>
+          </li>
+          <li class="banner-item">
+            <figure class="banner-fig">
+              <img src="assets/images/banner-01.jpg" alt="Banner Image">
+            </figure>
+            <div class="banner-content">
+              <span class="banner-span">Take a Glimpse Into The Beutiful Country Of:</span>
+              <h2 class="banner-heading">Switzerland</h2>
+              <div class="banner-btn">
+                <a href="#FIXME" class="go-btn" title="Go There">Go There</a>
+              </div>
+            </div>
+            <div class="counter-part">
+              <ul class="counter-list">
+                <li class="counter-item user">
+                  <h5 class="counter-heading">population:</h5>
+                  <span class="counter-Num" data-target="8.66">0</span>
+                </li>
+                <li class="counter-item world">
+                  <h5 class="counter-heading">Territory:</h5>
+                  <span class="counter-Num" data-target="41.290">0</span>
+                </li>
+                <li class="counter-item home">
+                  <h5 class="counter-heading">AVG Price:</h5>
+                  <span class="counter-Num" data-target="1.100.200">0</span>
+                </li>
+              </ul>
+              <div class="counter control">
+                <a href="#FIXME" class="explore" title="Explore More">Explore More</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <!-- banner slide end here -->
+      <!-- visit country section start here -->
+      <section class="visit-Country">
+        <div class="wrapper">
+          <h3 class="visit-heading">Visit One Of Our Countries Now</h3>
+          <p class="visit-description">Lorem ipsum dolar sit amet, consecteture adipiscing elit, sed do eiusmad tempor
+            incididunt ut labore</p>
+          <div class="visit-wrap">
+            <ul class="country-list">
+              <li class="country-item">
+                <figure class="country-fig">
+                  <img src="/assets/images/country-01.jpg" alt="Country Image">
+                </figure>
+                <div class="country-content">
+                  <div class="country-data">
+                    <div class="data-content">
+                      <h4 class="data-heading">switzerland</h4>
+                      <h5 class="data-sub-heading">Europe</h5>
+                    </div>
+                    <a href="#FIXME" class="data-link" title="Explore More">Explore More</a>
+                  </div>
+                  <p class="data-description">Woox Travel is a professional Bootstrap 5 theme HTML CSS layout for your
+                    website. You can use this layout for your commercial work.</p>
+                  <ul class="people-data">
+                    <li class="people-list user">8.66 Mil people</li>
+                    <li class="people-list world">41.290 km2</li>
+                    <li class="people-list home">$1.100.200</li>
+                  </ul>
+                  <div class="direction-wrap">
+                    <a href="#FIXME" class="direction-link" title="Need Direction">Need
+                      Directions ?</a>
                   </div>
                 </div>
-                <div class="input-content">
-                  <label for="date">Check In Date</label>
-                  <div class="input-text">
-                    <input type="date" name="Date" id="date" class="input date">
+              </li>
+              <li class="country-item">
+                <figure class="country-fig">
+                  <img src="/assets/images/country-02.jpg" alt="Country Image">
+                </figure>
+                <div class="country-content">
+                  <div class="country-data">
+                    <div class="data-content">
+                      <h4 class="data-heading">caribbean</h4>
+                      <h5 class="data-sub-heading">North America</h5>
+                    </div>
+                    <a href="#FIXME" class="data-link" title="Explore More">Explore More</a>
+                  </div>
+                  <p class="data-description">Lorem ipsumd dolor sit amet, consecteture adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore dolor sit amet, consecteture adipiscing elite, sed do eiusmod </p>
+                  <ul class="people-data">
+                    <li class="people-list user">44.48 Mil people</li>
+                    <li class="people-list world">275.400 km2</li>
+                    <li class="people-list home">$946.000</li>
+                  </ul>
+                  <div class="direction-wrap">
+                    <a href="#FIXME" class="direction-link" title="Need Direction">Need Directions ?</a>
                   </div>
                 </div>
-              </div>
-              <div class="input-destination">
-                <div class="input-content">
-                  <label for="destination">Choose Your Destination</label>
-                  <div class="input-text">
-                    <select name="Destination" id="destination" class="destination">
-                      <option value="select">ex. Switzerland,Lausanne</option>
-                      <option value="select">ex. Europe , Lausanne</option>
-                      <option value="select">ex. Havana , Kingston</option>
-                    </select>
+              </li>
+              <li class="country-item">
+                <figure class="country-fig">
+                  <img src="/assets/images/country-03.jpg" alt="Country Image">
+                </figure>
+                <div class="country-content">
+                  <div class="country-data">
+                    <div class="data-content">
+                      <h4 class="data-heading">france</h4>
+                      <h5 class="data-sub-heading">Europe</h5>
+                    </div>
+                    <a href="#FIXME" class="data-link" title="Explore More">Explore More</a>
+                  </div>
+                  <p class="data-description">We hope this woOx templateis useful for you, please support us a <a
+                      href="#FIXME" title="Paypal">small amount of paypal</a> to info [at] template.com for our
+                    survival. we really appreciate your contribution.</p>
+                  <ul class="people-data">
+                    <li class="people-list user">67.41 Mil people</li>
+                    <li class="people-list world">551.500 km2</li>
+                    <li class="people-list home">$425.600</li>
+                  </ul>
+                  <div class="direction-wrap">
+                    <a href="#FIXME" class="direction-link" title="Need Direction">Need
+                      Directions ?</a>
                   </div>
                 </div>
+              </li>
+            </ul>
+            <div class="mapouter">
+              <div class="gmap_canvas">
+                <iframe class="gmap-iframe"
+                  src="https://maps.google.com/maps?width=356&amp;height=507&amp;hl=en&amp;q=sunnyislessbeach&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                </iframe>
               </div>
-              <div class="input-control">
-                <div class="btn-wrap">
-                  <input type="submit" name="sub-btn" class="sub-btn" value="Make Your Reservation Now">
-                </div>
+              <div class="btn-ctrl">
+                <button class="page-btn">1</button>
+                <button class="page-btn active">2</button>
+                <button class="page-btn">3</button>
               </div>
-            </form>
+            </div>
           </div>
         </div>
       </section>
-      <!-- contact form section end here -->
+      <!-- visit country section end here -->
+      <!-- book section start here -->
+      <section class="book-section">
+        <div class="wrapper">
+          <div class="book-content">
+            <h3 class="book-heading">are you looking to travel ?</h3>
+            <span class="book-reserve">Make A Reservation By Clicking The Button</span>
+          </div>
+          <div class="book-btn">
+            <a href="#FIXME" class="reserve-btn" title="Book Yours Now">Book Yours Now</a>
+          </div>
+        </div>
+      </section>
+      <!-- book section start here -->
     </main>
     <!--main section end-->
 
@@ -160,6 +303,11 @@
           class="copy-link">Design: TemplateMo</a></p>
     </footer>
     <!--footer section end-->
+    <!-- scroll to up start here -->
+    <div class="scroll-up">
+      <span class="scroll-too" title="Scroll Up">scroll too</span>
+    </div>
+    <!-- scroll to up end here -->
 
   </div>
   <!--container end-->
