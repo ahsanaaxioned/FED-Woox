@@ -5,6 +5,7 @@ const hamburger = document.querySelector(".hamburger"),
   countryImage = document.querySelectorAll(".country-item"),
   countrySec = document.querySelector(".visit-Country"),
   counterNum = document.querySelectorAll(".counter-Num"),
+  aboutCounter = document.querySelectorAll(".country-counter"),
   speed = 100,
   form = document.querySelector(".my-form"),
   fullName = document.querySelector(".name"),
@@ -12,14 +13,16 @@ const hamburger = document.querySelector(".hamburger"),
   guest = document.querySelector(".guest"),
   date = document.querySelector(".date"),
   destination = document.querySelector(".destination"),
-  tabBtn=document.querySelectorAll(".scan-icon"),
+  tabBtn = document.querySelectorAll(".scan-icon"),
   fiterItem = document.querySelectorAll(".image-item"),
-  nameRegex = /^[A-Za-z\s]+$/,
+  counterSec = document.querySelector(".banner-slide"),
+  discoverSec = document.querySelector(".discover"),
+  locationSec = document.querySelector(".location")
+nameRegex = /^[A-Za-z\s]+$/,
   numberRegex = /^(\+91|0)?([7-9]\d{9})$/,
   dateRegex = /^([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/,
   html = document.querySelector("html");
 let isvalid;
-
 // console.log(fullName,number,guest,destination,date);
 // hamburger function start here
 hamburger.addEventListener("click", function () {
@@ -39,9 +42,9 @@ scrollUp.addEventListener("click", function () {
 });
 window.addEventListener("scroll", function () {
   if (window.scrollY > scrollUp.offsetHeight + 25) {
-    scrollUp.classList.add("show")
+    scrollUp.classList.add("scrol-show")
   } else {
-    scrollUp.classList.remove("show")
+    scrollUp.classList.remove("scrol-show")
   }
 });
 // scroll-up end here
@@ -87,22 +90,40 @@ countryImage.forEach(function (image, index) {
   });
 });
 // modal end here
-
+// function for counter num ber start here
 function numCount() {
   counterNum.forEach(function (currentEle) {
+    const targetNum = currentEle.dataset.target, tempNum = 50;
+    let initialNum = Number(currentEle.innerText);
     function updateNum() {
-      const targetNum = parseFloat(currentEle.dataset.target),
-        initialNum = parseFloat(currentEle.innerText),
-        increamentNum = (targetNum / speed * 100);
-      if (initialNum < targetNum) {
-        currentEle.innerText = initialNum + increamentNum + `${initialNum}km`;
-        setTimeout(updateNum, 10);
+      if (initialNum < tempNum) {
+        currentEle.innerText = `${initialNum}`;
+        setTimeout(updateNum, 5);
+        initialNum++;
+      } else {
+        currentEle.innerText = `${targetNum}`;
       }
     }
     updateNum();
   });
 };
-numCount();
+// function for counter number end here
+// counter scroll observer start here
+if (counterSec) {
+  const numObserver = new IntersectionObserver((entries, observer) => {
+    const [entry] = entries;
+    if (!entry.isIntersecting) return;
+    numCount();
+    // stopping observer once section obseerver done
+    observer.unobserve(counterSec);
+  },
+    {
+      root: null,
+      threshold: 0,
+    });
+  numObserver.observe(counterSec);
+}
+// counter scroll observer end here
 // form validation start here
 if (form) {
   form.addEventListener("submit", function (e) {
@@ -187,20 +208,156 @@ if (form) {
 // event form input end here
 // form validation end here
 // tab filter start here
-if(tabBtn){
+if (locationSec) {
   fiterItem[0].classList.add("show");
-tabBtn.forEach(function(filterEle,idx){
-filterEle.addEventListener("click",function(){
-  btnAttribute = filterEle.getAttribute('data-target');
-  fiterItem.forEach(function(list){
-    const listAttribute = list.getAttribute('data-target');
-    if (btnAttribute == listAttribute ) {
-      list.classList.add("show");
-    } else {
-      list.classList.remove("show");
-    }
-  })
-})
-});
+  tabBtn.forEach(function (filterEle, idx) {
+    filterEle.addEventListener("click", function () {
+      const active = document.querySelector(".filter-active"),
+        btnAttribute = filterEle.getAttribute('data-target');
+      active.classList.remove("filter-active");
+      filterEle.classList.add("filter-active");
+      fiterItem.forEach(function (list) {
+        const listAttribute = list.getAttribute('data-target');
+        if (btnAttribute == listAttribute) {
+          list.classList.add("show");
+        } else {
+          list.classList.remove("show");
+        }
+      })
+    })
+  });
 };
 // tab filter end here
+
+// about page 1st slider start here
+$('.city-list').slick({
+  dots: false,
+  infinite: false,
+  arrows: true,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 995,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+// about page 1st slider end her
+
+// counter for about page start here
+function numberCount() {
+  aboutCounter.forEach(function (currntEle) {
+    const dataNum = currntEle.dataset.discover, tempNum = 150;
+    let initialDataNum = Number(currntEle.innerText);
+    function updtNum() {
+      if (initialDataNum < tempNum) {
+        currntEle.innerText = `${initialDataNum}`;
+        setTimeout(updtNum, 15);
+        initialDataNum++;
+      } else {
+        currntEle.innerText = `${dataNum}`;
+      }
+    }
+    updtNum();
+  });
+};
+// counter scroll observer start here
+if (discoverSec) {
+  const numObserver = new IntersectionObserver((entries, observer) => {
+    const [entry] = entries;
+    if (!entry.isIntersecting) return;
+    numberCount();
+    // stopping observer once section obseerver done
+    observer.unobserve(discoverSec);
+  },
+    {
+      root: null,
+      threshold: 0,
+    });
+  numObserver.observe(discoverSec);
+};
+// counter scroll observer start here
+// counter for about page start end
+
+// about page slider 2nd start here
+$('.city-slide').slick({
+  dots: false,
+  infinite: false,
+  arrows: true,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1280,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 995,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 640,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+// about page slider 2nd start here
+// slider for home page start here
+$('.banner').slick({
+  dots: true,
+  infinite: false,
+  arrows: false,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+});
+// slider for home page end here
